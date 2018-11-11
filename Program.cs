@@ -78,7 +78,6 @@ namespace LinkedList
 
                 while (current != null)
                 {
-                    rnd = new Random();
                     pos = rnd.Next(0, lstRandom.Count - 1); //Generating a random value between '0' and highest element of the pointer list
                     GCHandle gcHandle = GCHandle.FromIntPtr((IntPtr)lstRandom[pos]); //Accessing the pointer of random position
                     current.arbitrary = (Node)gcHandle.Target; //Assigning the arbitrary node of current node to the random pointer
